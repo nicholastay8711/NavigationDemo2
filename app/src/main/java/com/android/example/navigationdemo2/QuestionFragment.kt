@@ -80,7 +80,8 @@ class QuestionFragment : Fragment() {
                     binding.radioGroup.clearCheck()
                     setQuestion()
                 }else{
-                    Navigation.findNavController(it).navigate(R.id.action_questionFragment_to_thankyouFragment3)
+                    val action=QuestionFragmentDirections.actionQuestionFragmentToThankyouFragment3(score)
+                    Navigation.findNavController(it).navigate(action)
                 }
             }else{
                 Toast.makeText(context,"please select answer",Toast.LENGTH_LONG).show()
